@@ -42,10 +42,10 @@ messaging.onBackgroundMessage((payload) => {
   const notificationTitle = payload.notification?.title || "Notification Title";
   const notificationOptions = {
     body: payload.notification?.body || "You have a message",
-    icon: "/smart-room-entry-app/public/images/icon_192x192.png",
-    badge: "/smart-room-entry-app/public/images/icon_192x192.png",
+    icon: "https://29ieH.github.io/smart-room-entry-app/public/images/icon_192x192.png",
+    badge:
+      "https://29ieH.github.io/smart-room-entry-app/public/images/icon_192x192.png",
     tag: "smart-room-notification",
-    requireInteraction: true,
   };
   console.log("Send notify with icon path:", notificationOptions.icon);
   return self.registration
