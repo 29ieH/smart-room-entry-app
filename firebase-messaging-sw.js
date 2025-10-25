@@ -26,7 +26,7 @@ self.addEventListener("activate", (event) => {
     self.registration
       .showNotification("Test Notification", {
         body: "Nếu bạn thấy này, service worker hoạt động!",
-        icon: "https://29ieH.github.io/smart-room-entry-fe/public/images/icon_192x192.png",
+        icon: "https://29ieH.github.io/smart-room-entry-app/public/images/icon_192x192.png",
         tag: "test",
       })
       .then(() => console.log("Test notification shown"))
@@ -42,8 +42,8 @@ messaging.onBackgroundMessage((payload) => {
   const notificationTitle = payload.notification?.title || "Notification Title";
   const notificationOptions = {
     body: payload.notification?.body || "You have a message",
-    icon: "/smart-room-entry-fe/public/images/icon_192x192.png",
-    badge: "/smart-room-entry-fe/public/images/icon_192x192.png",
+    icon: "/smart-room-entry-app/public/images/icon_192x192.png",
+    badge: "/smart-room-entry-app/public/images/icon_192x192.png",
     tag: "smart-room-notification",
     requireInteraction: true,
   };

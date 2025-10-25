@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const accessToken = localStorage.getItem("accessToken");
   if (accessToken) {
     setTimeout(() => {
-      window.location.href = "/smart-room-entry-fe/pages/log-access.html";
+      window.location.href = "/smart-room-entry-app/pages/log-access.html";
     }, 200);
   }
   loginForm.addEventListener("submit", async (e) => {
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
         await window.notificationManager.registerDeviceWithServer(accessToken);
       }
       setTimeout(() => {
-        window.location.href = "/smart-room-entry-fe/pages/log-access.html";
+        window.location.href = "/smart-room-entry-app/pages/log-access.html";
       }, 1000);
     } catch (err) {
       Toastify({

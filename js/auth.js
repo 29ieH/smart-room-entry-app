@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const checkLogin = async () => {
     const accessToken = localStorage.getItem("accessToken");
     if (!accessToken) {
-      window.location.href = "/smart-room-entry-fe/pages/login.html";
+      window.location.href = "/smart-room-entry-app/pages/login.html";
       return;
     } else {
       try {
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         if (!res.ok) {
           localStorage.removeItem("accessToken");
-          window.location.href = "/smart-room-entry-fe/pages/login.html";
+          window.location.href = "/smart-room-entry-app/pages/login.html";
         }
         const data = await res.json();
         console.log("Data me:: ", data);
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } catch (error) {
         console.error("Fetch error:", error);
         localStorage.removeItem("accessToken");
-        window.location.href = "/smart-room-entry-fe/pages/login.html";
+        window.location.href = "/smart-room-entry-app/pages/login.html";
       }
     }
   };

@@ -62,7 +62,7 @@ class NotificationManager {
   async registerServiceWorker() {
     try {
       this.registration = await navigator.serviceWorker.register(
-        "/smart-room-entry-fe/firebase-messaging-sw.js"
+        "/smart-room-entry-app/firebase-messaging-sw.js"
       );
       console.log("✅ Service Worker registered");
       return this.registration;
@@ -151,8 +151,8 @@ class NotificationManager {
     if (Notification.permission === "granted") {
       const options = {
         body: body,
-        icon: "/smart-room-entry-fe/public/images/icon_192x192.png",
-        badge: "/smart-room-entry-fe/public/images/icon_192x192.png",
+        icon: "/smart-room-entry-app/public/images/icon_192x192.png",
+        badge: "/smart-room-entry-app/public/images/icon_192x192.png",
         data: data,
         tag: `foreground-${Date.now()}`,
       };

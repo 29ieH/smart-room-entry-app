@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const repoBase = "/smart-room-entry-fe";
+  const repoBase = "/smart-room-entry-app";
   if ("serviceWorker" in navigator) {
     console.log("service woker main !!!");
     try {

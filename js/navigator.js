@@ -12,6 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   logoutBtn.addEventListener("click", () => {
     localStorage.removeItem("accessToken");
-    window.location.href = "/smart-room-entry-fe/pages/login.html";
+    window.location.href = "/smart-room-entry-app/pages/login.html";
   });
 });
